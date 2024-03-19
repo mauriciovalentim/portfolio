@@ -12,16 +12,26 @@ function App() {
             <header>
                 <p className="introduce">Oi, meu nome é Mauricio</p>
                 <p className="jobPosition">
-                    WEB
-                    <div className="social" id="linkedin"></div>
-                    <div className="social" id="github"></div>
-                    <div className="social" id="three"></div>
+                    <span className="no-click">WEB</span>
+                    <a
+                        className="link"
+                        href="https://github.com/mauriciovalentim"
+                        target="_blank"
+                    >
+                        <div className="social" id="github"></div>
+                    </a>
+                    <a
+                        className="link"
+                        href="https://www.linkedin.com/in/mauricio-valentim/"
+                        target="_blank"
+                    >
+                        <div className="social" id="linkedin"></div>
+                    </a>
                     <br></br>
                     DEVELOPER
                 </p>
-                <p className="info">
-                    Estudante de Análise e desenvolvimento de sistemas em busca
-                    do primeiro estágio
+                <p className="no-click">
+                    Estudante de Análise e desenvolvimento de sistemas no IFPE
                 </p>
             </header>
             <main>
@@ -51,7 +61,12 @@ function App() {
                                     "Aplicativo com listagem dos 151 primeiros pokemons"
                                 }
                             </p>
-                            <p>Tecnologias: {tech.map((t, i) => i < tech.length -1 ? t+', ': t)}</p>
+                            <p>
+                                Tecnologias:{" "}
+                                {tech.map((t, i) =>
+                                    i < tech.length - 1 ? t + ", " : t
+                                )}
+                            </p>
                         </div>
                     </div>
                 </div>
