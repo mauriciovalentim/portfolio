@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.personalIntroduction {
+    text-align: center;
+    user-select: none;
+    padding: 50px;
+    background: linear-gradient(100deg, #220e3f, #263167);
+}
+
+.personalIntroduction > p {
+    font-family: "Bowlby One SC";
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+
+p.jobPosition {
+    font-family: "Luckiest Guy";
+    font-weight: 400;
+    font-size: 10em;
+    line-height:0.8em;
+    color: white;
+}
+
+.linkedin:hover, .github:hover{
+    border: 0px solid black;
+    background-color: rgb(238, 234, 234);
+}
+
+.github, .linkedin {
+    margin-right: 0px;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-radius: 20px;
+    border: 1.5px solid black;
+}
+
+.github {
+    background-image: url(../assets/github.png);
+}
+
+.linkedin {
+    background-image: url(../assets/linkedin.png);
+}
+
+.specialColor, p.specialColor {
+    color: orange;
+}
