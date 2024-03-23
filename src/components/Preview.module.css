@@ -1,0 +1,6 @@
+.preview {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 8fr;
+    padding: 75px;
+}

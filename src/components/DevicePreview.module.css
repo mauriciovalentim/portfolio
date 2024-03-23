@@ -1,0 +1,108 @@
+.deviceContainer {
+    position: relative;
+    margin-left: 25px;
+    width: 450px;
+    height: 378px;
+    border-radius: 10px;
+    text-align: center;
+    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); */
+}
+.computer,
+.tablet {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+.mobile {
+    height: 100%;
+}
+.webPageComputer {
+    position: absolute;
+    top: 11.4px; 
+    left: 10px;
+    /* width: 95.45%;
+    height: 92%; */
+    width: 1200px;
+    height: 700.67px;
+    border: none;
+    transform: scale(0.355);
+    transform-origin: 0 0;
+}
+
+.webPageTablet {
+    position: absolute;
+    top: 50.2%;
+    left: 10px;
+    /* width: 95.45%;
+    height: 92%; */
+    width: 768px;
+    height: 445px;
+    transform: scale(0.56) translateY(-50%);
+    transform-origin: 0 0;
+    border: none;
+}
+
+.webPageMobile {
+    /* z-index: -1; */
+    position: absolute;
+    top: 5.4%;
+    left: 50%;
+    /* width: 95.45%;
+    height: 92%; */
+    width: 100%;
+    height: 240%;
+    border: none;
+    transform: scale(0.37) translateX(-50%);
+    transform-origin: 0 0;
+    border-radius: 10px;
+}
+
+.glassComputer {
+    margin: 0;
+    z-index: 5;
+    position: absolute;
+    top: 11.4px; 
+    left: 49.7%;
+    width: 1150px;
+    height: 672px;
+    transform: scale(0.37) translateX(-50%);
+    transform-origin: 0 0;
+    background: radial-gradient(circle at bottom left, rgba(210, 220, 255, 0), rgba(233, 233, 233, 0.30), rgb(233, 233, 233, 0.80));
+    pointer-events: none;
+    border: 5px solid rgba(114, 114, 114, 0.5);
+    border-radius: 10px;
+}
+
+.glassTablet {
+    margin: 0;
+    z-index: 5;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    /* width: 95.45%;
+    height: 92%; */
+    width: 258%;
+    height: 179%;
+    transform: scale(0.37) translate(-50%, -50%);
+    transform-origin: 0 0;
+    background: radial-gradient(circle at bottom left, rgba(210, 220, 255, 0), rgba(233, 233, 233, 0.30), rgb(233, 233, 233, 0.80));
+    pointer-events: none;
+    border: 5px solid rgba(114, 114, 114, 0.5);
+    border-radius: 10px;
+}
+.glassMobile {
+    margin: 0;
+    z-index: 5;
+    position: absolute;
+    top: 5.4%;
+    left: 50%;
+    width: 100%;
+    height: 240%;
+    transform: scale(0.37) translateX(-50%);
+    transform-origin: 0 0;
+    background: linear-gradient(to top right, rgba(210, 220, 255, 0), rgba(233, 233, 233, 0.40));
+    pointer-events: none;
+    border: 5px solid rgba(114, 114, 114, 0.5);
+    border-radius: 10px;
+}

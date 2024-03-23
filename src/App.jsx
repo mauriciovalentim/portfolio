@@ -1,6 +1,6 @@
 /*import "./App.css";*/
 import PersonalIntroduction from "./components/PersonalIntroduction";
-import ProjectInfo from './components/ProjectInfo'
+import ProjectInfo from "./components/ProjectInfo";
 function App() {
     let info = {
         url: "https://mauriciovalentim.github.io/pokedex/",
@@ -12,12 +12,13 @@ function App() {
         },
         description: "Aplicativo com listagem dos 151 primeiros pokemons",
     };
+    let info2 = {
+        url: "https://gabrielsoarespebr.github.io/sommelibeer/",
+        description: "Site de comparação de preço de bebidas",
+        techs: ["HTML", "CSS", "Javascript", "API Rest"],
+    };
     return (
         <>
-            <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-            />
             <PersonalIntroduction></PersonalIntroduction>
             <ProjectInfo info={info}></ProjectInfo>
         </>
