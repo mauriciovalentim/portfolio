@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*Info*/
+.container {
+    padding: 10%;
+    border-left: 1px solid black;
+    /*background-color: green;*/
+}
+
+.information {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    border: 1px solid #263167;
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+.information h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    background-color: #263167;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.information h3 {
+    padding: 0px 0.5em;
+    text-align: start;
+    background-color: #263167;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.projectLinks {
+    text-align:start;
+}
+.projectLinkIcons {
+    border: 2px solid white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: #263167;
+    border-radius: 10px;
+    font-size: 4em;
+    margin: 20px 10px 0px 0px;
+    transition: transform 0.2s ease, box-shadow 0.1s ease;
+}
+
+.projectLinkIcons:hover{
+    background-color: orange;
+    border: 2px solid white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.projectLinkIcons:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.techTag {
+    width: 50px;
+    margin: 10px 5px;
+}
+
+.techTagContainer {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}

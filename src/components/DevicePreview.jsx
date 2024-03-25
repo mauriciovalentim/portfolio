@@ -55,11 +55,7 @@ function DevicePreview({ device, url }) {
     }, [imgLoaded, frameLoaded]);
     return (
         <div className={styles.deviceContainer}>
-            {!previewReady && (
-                <div className={styles.loadingSpinner}>
-                    {console.log("Não está pronto!")}
-                </div>
-            )}
+            {!previewReady && <div className={styles.loadingSpinner}></div>}
             <img
                 key={key1}
                 src={version.image}
