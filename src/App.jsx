@@ -32,7 +32,8 @@ function App() {
                 tablet: true,
                 mobile: true,
             },
-            description: "Aplicativo com listagem dos 151 primeiros pokemons",
+            description:
+                "Ritual de passagem no desenvolvimento web: Listagem dos 151 primeiros Pokémon.",
         },
         {
             name: "sommelibeer",
@@ -57,7 +58,8 @@ function App() {
                 tablet: false,
                 mobile: false,
             },
-            description: "Site de comparação de preço de bebidas",
+            description:
+                "Protótipo de um site para comparação de informações e preços de bebidas.",
         },
         {
             name: "portfólio",
@@ -86,7 +88,7 @@ function App() {
                 tablet: false,
                 mobile: false,
             },
-            description: "Site de comparação de preço de bebidas",
+            description: "Listagem de informações e projetos pessoais",
         },
     ];
     return (
