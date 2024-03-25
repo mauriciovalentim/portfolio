@@ -1,13 +1,17 @@
 import styles from "./DevicePreview.module.css";
 import { useState, useEffect } from "react";
-import computer from "../assets/computer.png";
-import tablet from "../assets/tablet.png";
-import mobile from "../assets/mobile.png";
+import computer from "../assets/devices/computer.png";
+import tablet from "../assets/devices/tablet.png";
+import mobile from "../assets/devices/mobile.png";
 
 function DevicePreview({ device, url }) {
-    const [version, setVersion] = useState({});
+    const [imgLoaded, setImgLoaded] = useState(false);
+    const [frameLoaded, setFrameLoaded] = useState(false);
+    const [previewReady, setPreviewReady] = useState(false);
+    const [key1, setKey1] = useState(0);
+    const [key2, setKey2] = useState(1);
 
-    
+    const [version, setVersion] = useState({});
     const versionOptions = {
         computer: function () {
             setVersion({
@@ -37,12 +41,48 @@ function DevicePreview({ device, url }) {
 
     useEffect(() => {
         versionOptions[device]();
+        setImgLoaded(false);
+        setFrameLoaded(false);
+        setPreviewReady(false);
+        setKey1((prev) => prev + 1);
+        setKey2((prev) => prev + 1);
     }, [device]);
+
+    useEffect(() => {
+        if (imgLoaded && frameLoaded) {
+            setPreviewReady(true);
+        }
+    }, [imgLoaded, frameLoaded]);
     return (
         <div className={styles.deviceContainer}>
-            <img src={version.image} alt="" className={version.styleImage} />
-            <iframe className={version.stylePage} src={url}></iframe>
-            <div className={version.styleGlass}></div>
+            {!previewReady && (
+                <div className={styles.loadingSpinner}>
+                    {console.log("Não está pronto!")}
+                </div>
+            )}
+            <img
+                key={key1}
+                src={version.image}
+                alt="computador"
+                className={
+                    previewReady ? version.styleImage : styles.loadingHelper
+                }
+                onLoad={() => setImgLoaded(true)}
+            />
+            <iframe
+                key={key2}
+                src={url}
+                alt="website"
+                className={
+                    previewReady ? version.stylePage : styles.loadingHelper
+                }
+                onLoad={() => setFrameLoaded(true)}
+            ></iframe>
+            <div
+                className={
+                    previewReady ? version.styleGlass : styles.loadingHelper
+                }
+            ></div>
         </div>
     );
 }

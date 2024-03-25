@@ -12,7 +12,7 @@
 .personalIntroduction {
     text-align: center;
     user-select: none;
-    padding: 50px;
+    padding: 25px;
     background: linear-gradient(100deg, #220e3f, #263167);
 }
 
@@ -20,7 +20,7 @@
     font-family: "Bowlby One SC";
     font-weight: 500;
     font-size: 1.3em;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     color: white;
 }
@@ -53,11 +53,11 @@ p.jobPosition {
 }
 
 .github {
-    background-image: url(../assets/github.png);
+    background-image: url(../assets/social/github.png);
 }
 
 .linkedin {
-    background-image: url(../assets/linkedin.png);
+    background-image: url(../assets/social/linkedin.png);
 }
 
 .specialColor, p.specialColor {

@@ -1,26 +1,98 @@
 /*import "./App.css";*/
 import PersonalIntroduction from "./components/PersonalIntroduction";
-import ProjectInfo from "./components/ProjectInfo";
+import Project from "./components/Project";
+import html from "./assets/techs/html.png";
+import css from "./assets/techs/css.png";
+import js from "./assets/techs/javascript.png";
+import react from "./assets/techs/react.png";
+
 function App() {
-    let info = {
-        url: "https://mauriciovalentim.github.io/pokedex/",
-        techs: ["HTML", "CSS", "Javascript", "API Rest"],
-        responsiveness: {
-            pc: true,
-            tablet: true,
-            phone: true,
+    let projects = [
+        {
+            name: "pokedex",
+            url: "https://mauriciovalentim.github.io/pokedex/",
+            github: "https://github.com/mauriciovalentim/pokedex",
+            tags: [
+                {
+                    name: "HTML",
+                    img: html,
+                },
+                {
+                    name: "CSS",
+                    img: css,
+                },
+                {
+                    name: "Javascript",
+                    img: js,
+                },
+            ],
+
+            responsiveness: {
+                computer: true,
+                tablet: true,
+                mobile: true,
+            },
+            description: "Aplicativo com listagem dos 151 primeiros pokemons",
         },
-        description: "Aplicativo com listagem dos 151 primeiros pokemons",
-    };
-    let info2 = {
-        url: "https://gabrielsoarespebr.github.io/sommelibeer/",
-        description: "Site de comparação de preço de bebidas",
-        techs: ["HTML", "CSS", "Javascript", "API Rest"],
-    };
+        {
+            name: "sommelibeer",
+            url: "https://gabrielsoarespebr.github.io/sommelibeer/",
+            github: "https://github.com/gabrielsoarespebr/sommelibeer",
+            tags: [
+                {
+                    name: "HTML",
+                    img: html,
+                },
+                {
+                    name: "CSS",
+                    img: css,
+                },
+                {
+                    name: "Javascript",
+                    img: js,
+                },
+            ],
+            responsiveness: {
+                computer: true,
+                tablet: false,
+                mobile: false,
+            },
+            description: "Site de comparação de preço de bebidas",
+        },
+        {
+            name: "portfólio",
+            url: "https://mauriciovalentim.github.io/portfolio/",
+            github: "https://github.com/mauriciovalentim/portfolio",
+            tags: [
+                {
+                    name: "HTML",
+                    img: html,
+                },
+                {
+                    name: "CSS",
+                    img: css,
+                },
+                {
+                    name: "Javascript",
+                    img: js,
+                },
+                {
+                    name: "React",
+                    img: react,
+                },
+            ],
+            responsiveness: {
+                computer: true,
+                tablet: false,
+                mobile: false,
+            },
+            description: "Site de comparação de preço de bebidas",
+        },
+    ];
     return (
         <>
             <PersonalIntroduction></PersonalIntroduction>
-            <ProjectInfo info={info}></ProjectInfo>
+            <Project projects={projects}></Project>
         </>
     );
 }

@@ -4,33 +4,53 @@ import { IoIosTabletPortrait } from "react-icons/io";
 import { GiSmartphone } from "react-icons/gi";
 import { RiComputerLine } from "react-icons/ri";
 
-function PreviewButtons({ device, setDevice }) {
+function PreviewButtons({ device, setDevice, responsiveness }) {
     const [buttons, setButtons] = useState({});
-
     useEffect(() => {
         buttonsOptions[device]();
-    }, []);
+    }, [responsiveness, device]);
 
     const buttonsOptions = {
         computer: () => {
             setButtons({
-                computer: styles.versionButtonSelected,
-                tablet: styles.versionButton,
-                mobile: styles.versionButton,
+                computer: responsiveness.computer
+                    ? styles.versionButtonSelected
+                    : styles.versionButtonUnable,
+                tablet: responsiveness.tablet
+                    ? styles.versionButton
+                    : styles.versionButtonUnable,
+                mobile: responsiveness.mobile
+                    ? styles.versionButton
+                    : styles.versionButtonUnable,
+                // computer: styles.versionButtonSelected,
+                // tablet: styles.versionButton,
+                // mobile: styles.versionButton,
             });
         },
         tablet: () => {
             setButtons({
-                computer: styles.versionButton,
-                tablet: styles.versionButtonSelected,
-                mobile: styles.versionButton,
+                computer: responsiveness.computer
+                    ? styles.versionButton
+                    : styles.versionButtonUnable,
+                tablet: responsiveness.tablet
+                    ? styles.versionButtonSelected
+                    : styles.versionButtonUnable,
+                mobile: responsiveness.mobile
+                    ? styles.versionButton
+                    : styles.versionButtonUnable,
             });
         },
         mobile: () => {
             setButtons({
-                computer: styles.versionButton,
-                tablet: styles.versionButton,
-                mobile: styles.versionButtonSelected,
+                computer: responsiveness.computer
+                    ? styles.versionButton
+                    : styles.versionButtonUnable,
+                tablet: responsiveness.tablet
+                    ? styles.versionButton
+                    : styles.versionButtonUnable,
+                mobile: responsiveness.mobile
+                    ? styles.versionButtonSelected
+                    : styles.versionButtonUnable,
             });
         },
     };
