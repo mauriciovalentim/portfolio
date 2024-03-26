@@ -2,7 +2,7 @@ import styles from "./Preview.module.css";
 
 import PreviewButtons from "./PreviewButtons";
 import DevicePreview from "./DevicePreview";
-
+import { BsInfoSquare } from "react-icons/bs";
 import { useEffect, useState } from "react";
 
 function Preview({ info }) {
@@ -23,6 +23,18 @@ function Preview({ info }) {
             setDevice(updatedDevice);
         }
     }, [info]);
+
+    useEffect(() => {
+        setTimeout(activeInfoMessage, 2000)
+    },[0])
+    const [messageView, setMessageView] = useState(styles.message);
+    function activeInfoMessage() {
+        setMessageView(styles.messageVisible);
+        setTimeout(() => {
+            setMessageView(styles.message);
+        }, 3000);
+    }
+
     return (
         <div className={styles.preview}>
             <PreviewButtons
@@ -31,6 +43,11 @@ function Preview({ info }) {
                 responsiveness={info.responsiveness}
             ></PreviewButtons>
             <DevicePreview device={device} url={info.url}></DevicePreview>
+            <BsInfoSquare
+                className={styles.infoButton}
+                onClick={activeInfoMessage}
+            />
+            <p className={messageView}>O conteúdo dentro das telas é interativo</p>
         </div>
     );
 }

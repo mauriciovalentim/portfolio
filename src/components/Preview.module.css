@@ -1,6 +1,43 @@
 .preview {
+    position: relative;
     display: grid;
     align-items: center;
     grid-template-columns: 2fr 8fr;
     padding: 75px;
+}
+
+.infoButton {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.infoButton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+}
+.message {
+    display: none;
+    opacity: 0;
+}
+
+.messageVisible {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #333; /* Cor do texto */
+    position: absolute;
+    padding: 15px; /* Aumenta o espaçamento interno */
+    top: 0.5em; /* Ajusta a posição vertical */
+    right: 3em; /* Ajusta a posição horizontal */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo mais claro */
+    border: 1px solid rgb(196, 194, 194);
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); /* Sombra mais suave */
+    transition: opacity 0.3s ease; /* Transição suave */
+    z-index: 999; /* Garante que a mensagem esteja acima de outros elementos */
+    opacity: 1; /* Torna a mensagem visível */
 }
