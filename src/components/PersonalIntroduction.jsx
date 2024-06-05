@@ -1,4 +1,8 @@
 import styles from "./PersonalIntroduction.module.css";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
+
 function PersonalIntroduction() {
     const urls = {
         github: "https://github.com/mauriciovalentim",
@@ -9,14 +13,17 @@ function PersonalIntroduction() {
             <p>Oi, meu nome é Mauricio</p>
             <p className={styles.jobPosition}>
                 <span className={styles.specialColor}>WEB</span>
-                <a href={urls.github} target="_blank">
-                    <span className={`${styles.github}`}></span>
+                <a href={urls.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                    {/* <span className={styles.github}></span> */}
+                    <FaGithub className={styles.github}/>
                 </a>
-                <a href={urls.linkedin} target="_blank">
-                    <span className={`${styles.linkedin}`}></span>
+                <a href={urls.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                    {/* <span className={styles.linkedin}></span>     */}
+                    <FaLinkedin className={styles.linkedin}/>
+
                 </a>
-                <br></br>
-                DEVELOPER
+                <br />
+                <span className={styles.developer}>DEVELOPER</span>
             </p>
             <p className={styles.specialColor}>
                 Estudante de Análise e desenvolvimento de sistemas no IFPE
@@ -26,3 +33,4 @@ function PersonalIntroduction() {
 }
 
 export default PersonalIntroduction;
+

@@ -21,14 +21,19 @@ function ProjectInfo({ project }) {
                 </div>
                 <div className={styles.techTagContainer}>
                     <h3>stack</h3>
-                    {project.tags.map((tag, i) => (
-                        <img
-                            key={i}
-                            src={tag.img}
-                            title={tag.name}
-                            className={styles.techTag}
-                        />
-                    ))}
+                    <div className={styles.conta}>
+                        {project.tags.map((tag, i) => (
+                            <div className={styles.box}>
+                                <img
+                                    key={i}
+                                    src={tag.img}
+                                    title={tag.name}
+                                    className={styles.techTag}
+                                />
+                                <p>{tag.name}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

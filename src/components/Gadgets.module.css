@@ -1,0 +1,54 @@
+#whatsapp {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-image: url(../assets/social/whatsapp.png);
+    margin-right: 0px;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.1s ease;
+}
+
+#whatsapp:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#whatsapp:active {
+    transform: translate(0px, 5px);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+#scrollBack {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 4.5em;
+    color: #263167;
+    border: 1.5px solid #263167;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.1s ease, opacity 0.5s ease-out;
+}
+
+#scrollBack:hover {
+    background-color: #263167;
+    color: white;
+    cursor: pointer;
+}
+
+#scrollBack:active {
+    transform: translateY(5px);
+}

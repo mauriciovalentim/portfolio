@@ -69,10 +69,25 @@
 .techTag {
     width: 50px;
     margin: 10px 5px;
+    user-select: none;
 }
 
 .techTagContainer {
     position: absolute;
     bottom: 5%;
     left: 3%;
+}
+
+.conta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.box {
+    text-align: center;
+}
+
+.box > p {
+    text-align: center;
 }

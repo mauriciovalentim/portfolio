@@ -5,9 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-
 
 .personalIntroduction {
     text-align: center;
@@ -29,37 +27,54 @@ p.jobPosition {
     font-family: "Luckiest Guy";
     font-weight: 400;
     font-size: 10em;
-    line-height:0.8em;
+    line-height: 0.8em;
     color: white;
+    position: relative;
+    z-index: 1;
+}
+.socialLink {
+    margin-left: 15px;
+}
+.linkedin:hover, .github:hover {
+    background-color: orange;
+    border: 2px solid white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-.linkedin:hover, .github:hover{
-    border: 0px solid black;
-    background-color: rgb(238, 234, 234);
+.linkedin:active, .github:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .github, .linkedin {
-    margin-right: 0px;
     display: inline-block;
     height: 100px;
     width: 100px;
-    margin-left: 20px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-    border-radius: 20px;
-    border: 1.5px solid black;
+    position: relative;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: #263167;
+    border-radius: 7px;
+    font-size: 4em;
+    margin: 20px 10px 0px 0px;
+    transition: transform 0.2s ease, box-shadow 0.1s ease;
+    z-index: 2;
 }
 
 .github {
-    background-image: url(../assets/social/github.png);
 }
 
 .linkedin {
-    background-image: url(../assets/social/linkedin.png);
 }
 
 .specialColor, p.specialColor {
     color: orange;
+}
+
+.developer {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1; /* Ensure it does not overlap social icons */
 }

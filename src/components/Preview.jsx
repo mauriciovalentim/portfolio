@@ -25,8 +25,8 @@ function Preview({ info }) {
     }, [info]);
 
     useEffect(() => {
-        setTimeout(activeInfoMessage, 2000)
-    },[0])
+        setTimeout(activeInfoMessage, 2000);
+    }, [0]);
     const [messageView, setMessageView] = useState(styles.message);
     function activeInfoMessage() {
         setMessageView(styles.messageVisible);
@@ -47,7 +47,9 @@ function Preview({ info }) {
                 className={styles.infoButton}
                 onClick={activeInfoMessage}
             />
-            <p className={messageView}>O conteúdo dentro das telas é interativo</p>
+            <p className={messageView}>
+                O conteúdo dentro das telas é interativo
+            </p>
         </div>
     );
 }
