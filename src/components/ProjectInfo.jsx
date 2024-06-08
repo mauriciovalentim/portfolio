@@ -23,9 +23,8 @@ function ProjectInfo({ project }) {
                     <h3>stack</h3>
                     <div className={styles.conta}>
                         {project.tags.map((tag, i) => (
-                            <div className={styles.box}>
+                            <div key={i} className={styles.box}>
                                 <img
-                                    key={i}
                                     src={tag.img}
                                     title={tag.name}
                                     className={styles.techTag}
