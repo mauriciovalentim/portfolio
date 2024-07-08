@@ -1,7 +1,13 @@
+.container {
+    padding: 15px 15px 0px 0px;
+    justify-content: end;
+    gap: 5px;
+    display: none;
+}
 #infoButton {
-    position: absolute;
+    /* position: absolute;
     top: 0.5em;
-    right: 0.5em;
+    right: 0.5em; */
     font-size: 1.5em;
     color: rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.3);
@@ -28,14 +34,16 @@
 }
 #message {
     user-select: none;
+    height: fit-content;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-weight: 400;
     color: rgb(196, 194, 194);
-    position: absolute;
+    /* position: absolute; */
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
     padding: 15px;
-    top: 0.5em;
-    right: 3em;
+    /* top: 0.5em; */
+    /* right: 3em; */
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgb(196, 194, 194);
     border-radius: 5px;
@@ -50,4 +58,10 @@
 
 .visible {
     opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: flex;
+    }
 }

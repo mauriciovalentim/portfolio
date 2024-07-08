@@ -17,7 +17,6 @@ function FlowMenu({ index, setIndex, range }) {
 
     function flowControl(direction) {
         setIndex(index + direction);
-        console.log(range)
     }
     function stylesControl(n) {
         const prevStyle = n === 0 ? styles.arrowUnable : styles.previous;
@@ -35,6 +34,7 @@ function FlowMenu({ index, setIndex, range }) {
                 <FaDotCircle className={styles.dot} id={index == 0 ? styles.active : styles.unable}/>
                 <FaDotCircle className={styles.dot} id={index == 1 ? styles.active : styles.unable}/>
                 <FaDotCircle className={styles.dot} id={index == 2 ? styles.active : styles.unable}/>
+                <FaDotCircle className={styles.dot} id={index == 3 ? styles.active : styles.unable}/>
             </div>
             <div className={styles.menuFlow}>
                 <MdOutlineKeyboardArrowLeft

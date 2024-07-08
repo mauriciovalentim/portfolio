@@ -22,7 +22,6 @@ function Gadgets(){
     }, [])
     return (
         <div>
-            <a href="https://wa.me/5581984268982?text=" target="_blank" id={styles.whatsapp}></a>
             <MdOutlineKeyboardArrowUp id={styles.scrollBack} className={isScroll ? styles.visible : styles.hidden} onClick={scrollBack}/>
         </div>
     )

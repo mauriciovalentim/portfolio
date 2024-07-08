@@ -10,14 +10,20 @@ function ProjectInfo({ project }) {
                 <h2>{project.name}</h2>
                 <p>{project.description}</p>
                 <div className={styles.projectLinks}>
-                    <a href={project.url} target="_blank">
-                        <GoLinkExternal className={styles.projectLinkIcons} />
-                    </a>
-                    <a href={project.github} target="_blank">
-                        <FaGithub
-                            className={`${styles.projectLinkIcons} ${styles.githubIcon}`}
-                        />
-                    </a>
+                    {project.url && (
+                        <a href={project.url} target="_blank">
+                            <GoLinkExternal
+                                className={styles.projectLinkIcons}
+                            />
+                        </a>
+                    )}
+                    {project.github && (
+                        <a href={project.github} target="_blank">
+                            <FaGithub
+                                className={`${styles.projectLinkIcons} ${styles.githubIcon}`}
+                            />
+                        </a>
+                    )}
                 </div>
                 <div className={styles.techTagContainer}>
                     <h3>stack</h3>
@@ -26,6 +32,7 @@ function ProjectInfo({ project }) {
                             <div key={i} className={styles.box}>
                                 <img
                                     src={tag.img}
+                                    alt={tag.name}
                                     title={tag.name}
                                     className={styles.techTag}
                                 />

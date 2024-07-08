@@ -1,10 +1,31 @@
 .buttonsContainer {
+    display: flex;
+    justify-content: space-around;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* justify-items: center; */
+    /* align-items: center; */
+    padding: 0px 30px;
+    /* margin-bottom: 10px; */
+}
+
+.versionButton {
+    font-size: 4em;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #263167;
+    /* margin-bottom: 10px; */
+    /* margin: 0px 10px 10px 0px; */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.1s ease;
+}
+/*.buttonsContainer {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    background-color: orange;
 }
 
 .versionButton {
@@ -24,8 +45,6 @@
 
 .versionButton:hover {
     cursor: pointer;
-    /* background: linear-gradient(100deg, #220e3f, #263167); */
-    /* color: orange; */
     background-color: orange;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
     border: 1px solid white;
@@ -33,10 +52,8 @@
 }
 
 .versionButton:active {
-    /* box-shadow: 1.2px 1.2px 1px rgba(0, 0, 0, 0.4); */
     transform: translate(-25%, 4px);
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0);
-}
 
 .versionButtonSelected {
     font-size: 6em;
@@ -47,4 +64,59 @@
     transform: translate(-25%, 2px);
     background: linear-gradient(100deg, #220e3f, #263167);
     color: white;
+} 
+}*/
+
+.versionButtonUnable {
+    display: none;
+}
+
+.versionButton:hover {
+    cursor: pointer;
+    background-color: orange;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    color: white;
+    
+}
+
+.versionButton:active {
+    transform: translate(0, 1px);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0);
+}
+
+.versionButtonSelected {
+    font-size: 4em;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    /* margin: 0px 10px 10px 0px; */
+    transform: translate(0px, 1px);
+    background: linear-gradient(100deg, #220e3f, #263167);
+    color: white;
+}
+
+@media (min-width: 375px) {
+    .versionButton {
+        font-size: 5em;
+    }
+    .versionButtonSelected {
+        font-size: 5em;
+    }
+}
+@media (min-width: 768px) {
+    .buttonsContainer {
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .versionButton {
+        font-size: 6em;
+    }
+    .versionButtonSelected {
+        font-size: 6em;
+    }
 }

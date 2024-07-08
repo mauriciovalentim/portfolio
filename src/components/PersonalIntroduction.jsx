@@ -1,31 +1,37 @@
+import { useEffect, useState } from "react";
 import styles from "./PersonalIntroduction.module.css";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-
+import SocialLinks from "./SocialLinks";
 
 function PersonalIntroduction() {
-    const urls = {
-        github: "https://github.com/mauriciovalentim",
-        linkedin: "https://www.linkedin.com/in/mauricio-valentim/",
-    };
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <header className={styles.personalIntroduction}>
-            <p>Oi, meu nome é Mauricio</p>
-            <p className={styles.jobPosition}>
-                <span className={styles.specialColor}>WEB</span>
-                <a href={urls.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                    {/* <span className={styles.github}></span> */}
-                    <FaGithub className={styles.github}/>
-                </a>
-                <a href={urls.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                    {/* <span className={styles.linkedin}></span>     */}
-                    <FaLinkedin className={styles.linkedin}/>
+            {/* <p>Oi, meu nome é Mauricio</p> */}
+            <p className={styles.name}>Mauricio Valentim</p>
+            {windowWidth < 992 && (
+                <p className={styles.jobPosition}>
+                    <span className={styles.specialColor}>WEB</span>
+                    <br />
+                    <span className={styles.developer}>DEVELOPER</span>
+                    <br />
+                    <SocialLinks />
+                </p>
+            )}
+            {windowWidth >= 992 && (
+                <p className={styles.jobPosition}>
+                    <span className={styles.specialColor}>WEB</span>
+                    <SocialLinks />
+                    <br />
+                    <span className={styles.developer}>DEVELOPER</span>
+                </p>
+            )}
 
-                </a>
-                <br />
-                <span className={styles.developer}>DEVELOPER</span>
-            </p>
-            <p className={styles.specialColor}>
+            <p className={`${styles.specialColor} ${styles.message}`}>
                 Estudante de Análise e desenvolvimento de sistemas no IFPE
             </p>
         </header>
@@ -33,4 +39,3 @@ function PersonalIntroduction() {
 }
 
 export default PersonalIntroduction;
-

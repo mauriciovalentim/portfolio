@@ -1,8 +1,41 @@
-import styles  from "./AllProjects.module.css"
-export default function AllProjects() {
-  return (
-    <div className={styles.container}>AllProjects
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eos voluptate, commodi aperiam ipsum hic nisi, sint non dolorem reprehenderit velit delectus deleniti nemo necessitatibus? Neque exercitationem soluta magnam deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, modi cupiditate pariatur dolor deserunt consectetur itaque? A natus aliquid fugit perspiciatis? At esse excepturi exercitationem in, similique possimus vitae voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, laboriosam! Vitae provident neque repellendus dolor, cupiditate, aut veritatis adipisci veniam laudantium ullam esse et enim aperiam eligendi ratione possimus eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aperiam, maiores laborum minus perspiciatis ab, optio quae ratione repellendus, facilis praesentium. Aspernatur dolor pariatur explicabo animi facilis officia, fugiat commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda unde saepe aliquid, totam cumque numquam voluptate amet animi minus ducimus incidunt itaque, aspernatur sunt error. Nihil laboriosam ipsa sit animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sunt provident iusto perspiciatis quidem cupiditate quisquam ex eveniet ea magnam dolore nihil, quis quas optio cum ad ratione. Distinctio, eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, excepturi. Sequi repudiandae officiis ratione eligendi voluptatibus provident vero quos, tenetur maxime repellat aut debitis totam dolor necessitatibus commodi corporis beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ipsam itaque earum tenetur vel eligendi impedit, aperiam perferendis sed iste blanditiis? Adipisci perferendis perspiciatis sint quos veniam sit aspernatur itaque! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos enim obcaecati quibusdam inventore tempora omnis, cum ab, minima ullam saepe quasi? Quidem consequatur illo doloribus totam velit, asperiores quibusdam aut. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos nesciunt porro quidem aut nulla vel doloremque, aperiam cumque impedit repudiandae. Quo fugiat vel iure quidem veritatis quis alias ipsam dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. A incidunt corporis, voluptate sunt quos fugit soluta perferendis, corrupti nam adipisci in distinctio aspernatur iusto tempore rem autem vitae! Assumenda, error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequuntur dolores impedit quasi iure nesciunt provident incidunt iste ullam, rem suscipit consequatur ab maxime itaque vero labore, enim, nobis quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laborum, adipisci harum doloribus, voluptas voluptatibus commodi dolorum nulla molestiae sed modi eveniet atque, aliquid aperiam quo fuga dolore dolorem repudiandae! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor dolorem totam recusandae eveniet id nisi quibusdam, ea hic reprehenderit officiis inventore dignissimos ad cum magnam commodi, perspiciatis natus praesentium at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem in corporis suscipit labore ea magni hic nostrum, nesciunt ullam voluptatum ipsa architecto tempore! Suscipit, beatae corporis officiis aut reiciendis minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum molestias exercitationem, esse totam nisi at, corporis fugit magni nihil in quia ipsum suscipit beatae ab? Dolore nihil corrupti ipsum eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ullam hic rerum quisquam. Ratione qui unde corrupti veritatis numquam hic maxime beatae architecto aut? Suscipit tempora impedit nesciunt soluta mollitia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo repellat, modi magni quam aliquam est nobis maxime, delectus id corporis porro, voluptate quod sit incidunt! Fugiat tenetur doloribus eos qui.</h1>
-    </div>
-  )
+import styles from "./AllProjects.module.css";
+import html from "../assets/techs/html.png";
+import css from "../assets/techs/css.png";
+import react from "../assets/techs/react.png";
+import { GoLinkExternal } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
+
+export default function AllProjects({ projects }) {
+    return (
+        <div className={styles.container}>
+            {projects.map((project) => (
+                <div className={styles.project}>
+                    <img src={project.img} alt="" />
+                    <div className={styles.stackContainer}>
+                        {project.tags.map((tag) => (
+                            <img
+                                className={styles.stack}
+                                src={tag.img}
+                                alt={tag.name}
+                                title={tag.name}
+                            ></img>
+                        ))}
+                    </div>
+                    <h2>{project.name.toUpperCase()}</h2>
+                    <div className={styles.linksContainer}>
+                        {project.url && (
+                            <a href={project.url} target="_blank">
+                                <GoLinkExternal className={styles.link} />
+                            </a>
+                        )}
+                        {project.github && (
+                            <a href={project.github} target="_blank">
+                                <FaGithub className={styles.link} />
+                            </a>
+                        )}
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
 }

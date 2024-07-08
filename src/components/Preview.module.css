@@ -1,7 +1,22 @@
 .preview {
     position: relative;
+    display: block;
+    padding: 15px;
+    /* align-items: center; */
+    /* grid-template-row: 2fr 8fr; */
+    /* background-color: green; */
+}
+
+/* .preview {
+    position: relative;
     display: grid;
     align-items: center;
     grid-template-columns: 2fr 8fr;
     padding: 75px;
+} */
+
+@media (min-width: 768px) {
+    .preview {
+        display: flex;
+    }
 }

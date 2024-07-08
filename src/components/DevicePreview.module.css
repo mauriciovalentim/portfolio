@@ -1,11 +1,167 @@
 .deviceContainer {
     position: relative;
+    width: 100%;
+    border-radius: 10px;
+
+    /* padding: 5%; */
+    /* text-align: center; */
+}
+
+.deviceContainer > * {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.computer {
+    z-index: 1;
+    pointer-events: none;
+    width: 100%;
+}
+.tablet {
+    z-index: 1;
+    pointer-events: none;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.mobile {
+    z-index: 1;
+    pointer-events: none;
+    /* height: 100%; */
+    display: block;
+    margin: auto;
+}
+.webPageComputer {
+    width: 1706px;
+    height: 960px;
+    position: absolute;
+    top: 4.5%;
+    left: 4%;
+    transform-origin: 0 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.glassComputer {
+    width: 1706px;
+    height: 960px;
+    position: absolute;
+    top: 4.5%;
+    left: 4%;
+    transform-origin: 0 0;
+    border-radius: 5px;
+    border: 5px solid rgba(114, 114, 114, 0.5);
+    pointer-events: none;
+    z-index: 5;
+
+    background: radial-gradient(
+        circle at bottom left,
+        rgba(210, 220, 255, 0),
+        rgba(233, 233, 233, 0.3),
+        rgb(233, 233, 233, 0.8)
+    );
+}
+
+.webPageTablet {
+    width: 1024px;
+    height: 768px;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform-origin: 0 0;
+    border-radius: 20px;
+    border: none;
+}
+
+.glassTablet {
+    width: 1024px;
+    height: 769.5px;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform-origin: 0 0;
+    border-radius: 20px;
+    border: 5px solid rgba(114, 114, 114, 0.5);
+    pointer-events: none;
+    z-index: 5;
+    background: radial-gradient(
+        circle at bottom left,
+        rgba(210, 220, 255, 0),
+        rgba(233, 233, 233, 0.3),
+        rgb(233, 233, 233, 0.8)
+    );
+}
+
+/* .webPageComputer,
+.webPageMobile,
+.webPageTablet,
+.glassComputer,
+.glassMobile,
+.glassTablet {
+    display: none;
+} */
+
+.webPageMobile {
+    width: 425px;
+    height: 885px;
+    position: absolute;
+    top: 2%;
+    left: 50.3%;
+    transform-origin: 0 0;
+    border-radius: 65px;
+    border: none;
+}
+
+.glassMobile {
+    width: 429px;
+    height: 889px;
+    position: absolute;
+    top: 2%;
+    left: 50.3%;
+    transform-origin: 0 0;
+    border-radius: 65px;
+    border: 5px solid rgba(114, 114, 114, 0.5);
+    pointer-events: none;
+    z-index: 5;
+    background: radial-gradient(
+        circle at bottom left,
+        rgba(210, 220, 255, 0),
+        rgba(233, 233, 233, 0.1),
+        rgb(233, 233, 233, 0.8)
+    );
+}
+
+.spinnerContainer {
+    height: 250%;
+    display: flex;
+}
+
+.loadingHelper {
+    display: none;
+}
+
+.loadingSpinner {
+    display: none;
+    margin: auto;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #263167;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* .deviceContainer {
+    position: relative;
     margin-left: 25px;
     width: 450px;
     height: 378px;
     border-radius: 10px;
     text-align: center;
-    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); */
 }
 .computer,
 .tablet {
@@ -25,8 +181,6 @@
     position: absolute;
     top: 4.75%;
     left: 3.75%;
-    /* width: 95.45%;
-    height: 92%; */
     width: 1400px;
     height: 792.5px;
     border: none;
@@ -38,8 +192,6 @@
     position: absolute;
     top: 50.2%;
     left: 10px;
-    /* width: 95.45%;
-    height: 92%; */
     width: 768px;
     height: 445px;
     transform: scale(0.56) translateY(-50%);
@@ -48,12 +200,9 @@
 }
 
 .webPageMobile {
-    /* z-index: -1; */
     position: absolute;
     top: 5.4%;
     left: 50%;
-    /* width: 95.45%;
-    height: 92%; */
     width: 100%;
     height: 240%;
     border: none;
@@ -89,8 +238,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    /* width: 95.45%;
-    height: 92%; */
     width: 258%;
     height: 179%;
     transform: scale(0.37) translate(-50%, -50%);
@@ -130,21 +277,28 @@
 }
 
 .loadingSpinner {
-    position: absolute; /* Mudança de absolute para fixed para centralizar na tela inteira */
+    position: absolute; 
     top: 50%;
     left: 50%;
-    margin-top: -50px; /* Metade do tamanho do spinner (50px) */
-    margin-left: -50px; /* Metade do tamanho do spinner (50px) */
+    margin-top: -50px; 
+    margin-left: -50px; 
     border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: #263167; /* Cor da borda do spinner */
+    border-left-color: #263167; 
     border-radius: 50%;
-    width: 100px; /* Tamanho do spinner */
-    height: 100px; /* Tamanho do spinner */
-    animation: spin 1s linear infinite; /* Animação de rotação */
+    width: 100px; 
+    height: 100px; 
+    animation: spin 1s linear infinite; 
 }
 
 @keyframes spin {
     to {
         transform: rotate(360deg);
     }
+} */
+@media (min-width: 768px) {
+    /* .mobile,
+    .webPageMobile,
+    .glassMobile {
+        transform: translateX(-10%);
+    } */
 }

@@ -1,12 +1,13 @@
 import styles from "./Preview.module.css";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import PreviewButtons from "./PreviewButtons";
 import DevicePreview from "./DevicePreview";
-import InfoMessage from './InfoMessage';
 
 function Preview({ info }) {
+
+
     const [device, setDevice] = useState(() => {
         if (info.responsiveness.computer) return "computer";
         if (info.responsiveness.tablet) return "tablet";
@@ -33,7 +34,7 @@ function Preview({ info }) {
                 responsiveness={info.responsiveness}
             ></PreviewButtons>
             <DevicePreview device={device} url={info.url}></DevicePreview>
-            <InfoMessage></InfoMessage>
+            
         </div>
     );
 }

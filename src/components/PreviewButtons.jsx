@@ -4,7 +4,13 @@ import { IoIosTabletPortrait } from "react-icons/io";
 import { GiSmartphone } from "react-icons/gi";
 import { RiComputerLine } from "react-icons/ri";
 
-function PreviewButtons({ device, setDevice, responsiveness }) {
+function PreviewButtons({
+    device,
+    setDevice,
+    responsiveness,
+    deviceContainer,
+    setWidth,
+}) {
     const [buttons, setButtons] = useState({});
     useEffect(() => {
         buttonsOptions[device]();

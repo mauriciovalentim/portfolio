@@ -10,18 +10,27 @@ import AllProjects from "./components/AllProjects";
 function App() {
     return (
         <>
-            <PersonalIntroduction></PersonalIntroduction>
+            <PersonalIntroduction style={{backgroundColor: "red"}}></PersonalIntroduction>
             <BrowserRouter>
                 <MenuNav></MenuNav>
                 <Routes>
-                    <Route path="/portfolio" element={<Navigate to='/portfolio/highlights'/>}/>
+                    <Route
+                        path="/portfolio"
+                        element={<Navigate to="/portfolio/highlights" />}
+                    />
                     <Route
                         path="/portfolio/highlights"
-                        element={<Project projects={projects} />}
+                        element={
+                            <Project
+                                projects={projects.filter(
+                                    (project) => project.highlight === true
+                                )}
+                            />
+                        }
                     ></Route>
                     <Route
                         path="/portfolio/all"
-                        element={<AllProjects />}
+                        element={<AllProjects projects={projects} />}
                     ></Route>
                 </Routes>
             </BrowserRouter>
