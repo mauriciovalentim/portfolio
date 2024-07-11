@@ -19,7 +19,7 @@ function PersonalIntroduction() {
                     <br />
                     <span className={styles.developer}>DEVELOPER</span>
                     <br />
-                    <SocialLinks />
+                    {/* <SocialLinks /> */}
                 </p>
             )}
             {windowWidth >= 992 && (
@@ -31,9 +31,9 @@ function PersonalIntroduction() {
                 </p>
             )}
 
-            <p className={`${styles.specialColor} ${styles.message}`}>
+            {/* <p className={`${styles.specialColor} ${styles.message}`}>
                 Estudante de Análise e desenvolvimento de sistemas no IFPE
-            </p>
+            </p> */}
         </header>
     );
 }

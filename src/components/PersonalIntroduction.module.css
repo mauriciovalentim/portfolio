@@ -13,14 +13,14 @@
     text-wrap: wrap;
     color: white;
     width: 100%;
-    padding: 25px 25px 5px 25px;
+    padding: 20px;
 }
 
 .personalIntroduction > p {
     font-family: "Bowlby One SC";
     font-weight: 500;
     /* font-size: 1.3em; */
-    margin-bottom: 15px;
+
     text-transform: uppercase;
     color: white;
 }
@@ -28,58 +28,29 @@
 .specialColor,
 p.specialColor {
     color: orange;
+    /* margin-right: 14px; */
+}
+
+.name {
+    margin-bottom: 5px;
+}
+
+.message {
+    margin-top: 5px;
 }
 
 p.jobPosition {
-    font-family: "Luckiest Guy";
+    user-select: none;
+    /* font-family: "Luckiest Guy"; */
     font-weight: 400;
-    font-size: 3em;
-    line-height: 0.8em;
+    font-size: 2.5em;
+    line-height: 0.9em;
     color: white;
-    position: relative;
+    /* position: relative; */
     z-index: 1;
     text-wrap: wrap;
 }
 
-/* .personalIntroduction {
-
-    text-align: center;
-    user-select: none;
-    padding: 25px;
-    background: linear-gradient(100deg, #220e3f, #263167);
-}
-
-.personalIntroduction > p {
-    font-family: "Bowlby One SC";
-    font-weight: 500;
-    font-size: 1.3em;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    color: white;
-}
-
-p.jobPosition {
-    font-family: "Luckiest Guy";
-    font-weight: 400;
-    font-size: 10em;
-    line-height: 0.8em;
-    color: white;
-    position: relative;
-    z-index: 1;
-}
-
-.specialColor, p.specialColor {
-    color: orange;
-}
-
-.developer {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-}
-
- */
 
 @media (min-width: 768px) {
     .name {
@@ -89,7 +60,7 @@ p.jobPosition {
         font-size: 5em;
     }
     .message {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 }
 
@@ -98,9 +69,9 @@ p.jobPosition {
         font-size: 2em;
     }
     p.jobPosition {
-        font-size: 10em;
+        font-size: 7em;
     }
     .message {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }

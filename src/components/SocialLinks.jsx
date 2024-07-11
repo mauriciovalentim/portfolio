@@ -1,8 +1,8 @@
 import styles from "./SocialLinks.module.css";
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
 
 export default function SocialLinks() {
     const urls = {
@@ -13,28 +13,17 @@ export default function SocialLinks() {
     };
     return (
         <span className={styles.container}>
-            {" "}
-            <a
-                href={urls.github}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <FaGithub className={styles.github} />
-            </a>
-            <a
-                href={urls.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <FaLinkedin className={styles.linkedin} />
-            </a>
-            <a
-                href={urls.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <FaWhatsapp className={styles.whatsapp} />
-            </a>
+            <span className={styles.box}>
+                <a href={urls.github} target="_blank" rel="noopener noreferrer">
+                    <FaGithubSquare className={styles.social} />
+                </a>
+                <a href={urls.linkedin} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className={styles.social} />
+                </a>
+                <a href={urls.whatsapp} target="_blank" rel="noopener noreferrer">
+                    <FaWhatsappSquare className={styles.social} />
+                </a>
+            </span>
         </span>
     );
 }

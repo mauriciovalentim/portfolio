@@ -1,0 +1,8 @@
+.choiceContainer {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    padding: 30px 0px 10px 0px;
+    gap: 10px;
+}

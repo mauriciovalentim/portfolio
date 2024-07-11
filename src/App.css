@@ -1,0 +1,61 @@
+.link, .active {
+    user-select: none;
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+
+.link:hover {
+    cursor: pointer;
+    background-color: orange;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    color: white;
+    background-color: white;
+    color: black;
+}
+.active {
+    background-color: white;
+    color: black;
+}
+
+.active:hover {
+    cursor: default;
+    box-shadow: none;
+}
+
+
+/* #name, #email, #message, #submit {
+    width: 90%;
+    display: block;
+    margin: 5px auto;
+    padding: 15px;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1em;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.1s ease;
+}
+#submit:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+}
+#submit:active {
+    transform: translateY(1px);
+}
+
+#message {
+    height: 150px;
+    text-wrap: wrap;
+} */

@@ -21,7 +21,6 @@
 
 .clickable:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.5);
 }
 
 .clickable:active {

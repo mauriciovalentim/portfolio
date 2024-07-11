@@ -22,7 +22,7 @@ function InfoMessage({msgRef}){
     }
 
     useEffect(() => {
-        if (localStorage.getItem("hasVisited")){
+        if (!localStorage.getItem("hasVisited")){
             setTimeout(activeInfoMessage, 2000);
             localStorage.setItem("hasVisited", true)
         }

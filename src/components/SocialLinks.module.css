@@ -1,30 +1,24 @@
-.github, .linkedin, .whatsapp {
+.container {
     display: none;
-    height: 50px;
-    width: 50px;
-    border: 1px solid rgb(255, 255, 255);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.social {
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
     color: white;
-    background-color: #263167;
-    border-radius: 7px;
-    font-size: 4em;
-    margin: 15px 0px 0px 15px;
+    font-size: 2em;
+    /* background-color: #263167; */
+    /* border-radius: 7px; */
+    /* font-size: 4em; */
+    /* margin: 15px 0px 0px 15px; */
     transition: transform 0.2s ease, box-shadow 0.1s ease;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
-.linkedin:hover, .github:hover, .whatsapp:hover {
-    background-color: orange;
-    border: 2px solid white;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-}
-
-.linkedin:active, .github:active, .whatsapp:active {
-    transform: translateY(5px);
+.social:active {
+    transform: translateY(3px);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* .github, .linkedin, .whatsapp {
+/*social {
     display: inline-block;
     height: 100px;
     width: 100px;
@@ -41,26 +35,41 @@
 
  */
 
- @media (min-width: 576px) {
-    .github, .linkedin, .whatsapp {
-        height: 50px;
-        width: 50px;
-        display: inline-block;
+@media (min-width: 576px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        /* margin-top: 5px; */
     }
- }
+    .social {
+        display: inline-block;
+        margin-right: 5px;
+        margin-top: 10px;
+        font-size: 1em;
+        color: white;
+    }
+}
 
- @media (min-width: 768px) {
-    .github, .linkedin, .whatsapp {
-        height: 75px;
-        width: 75px;
+@media (min-width: 992px) {
+    .container {
         display: inline-block;
+        transform: translate(10px, 10px);
+
     }
- }
- @media (min-width: 992px) {
-    .github, .linkedin, .whatsapp {
-        margin: 0px 15px 0px 0px;
-        height: 100px;
-        width: 100px;
-        transform: translateY(-4px);
+    .box {
+        display: flex;
+        justify-content: center;
+        height: 0px;
+        font-size: 0.9em;
     }
- }
+
+    .social {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .social:hover {
+        color: orange;
+    }
+}

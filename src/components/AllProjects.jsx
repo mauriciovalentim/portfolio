@@ -8,8 +8,8 @@ import { FaGithub } from "react-icons/fa";
 export default function AllProjects({ projects }) {
     return (
         <div className={styles.container}>
-            {projects.map((project) => (
-                <div className={styles.project}>
+            {projects.map((project, i) => (
+                <div key={i} className={styles.project}>
                     <img src={project.img} alt="" />
                     <div className={styles.stackContainer}>
                         {project.tags.map((tag) => (

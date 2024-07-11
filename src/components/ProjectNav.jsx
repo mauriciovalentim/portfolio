@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styles from "./MenuNav.module.css";
+import styles from "./ProjectNav.module.css";
 export default function MenuNav() {
     return (
         <nav className={styles.choiceContainer}>
@@ -7,13 +7,13 @@ export default function MenuNav() {
                 className={({ isActive }) =>
                     isActive ? `${styles.link} ${styles.active}` : styles.link
                 }
-                to="/portfolio/highlights"
+                to="/highlights"
             >
-                Destaque
+                DESTAQUE
             </NavLink>
             <NavLink className={({ isActive }) =>
-                    isActive ? `${styles.link} ${styles.active}` : styles.link} to="/portfolio/all">
-                Todos
+                    isActive ? `${styles.link} ${styles.active}` : styles.link} to="/all">
+                TODOS
             </NavLink>
         </nav>
     );
