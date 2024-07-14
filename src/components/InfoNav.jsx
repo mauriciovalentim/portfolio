@@ -1,12 +1,8 @@
 import styles from "./InfoNav.module.css";
-import { NavLink, useLocation, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { NavLink, useLocation} from "react-router-dom";
 
 export default function InfoNav() {
     const { pathname } = useLocation();
-    useEffect(() => {
-        console.log(pathname.split("/"));
-    }, [pathname]);
     return (
         <div className={styles.choiceContainer}>
             <NavLink

@@ -22,7 +22,7 @@ function App() {
                         <Routes>
                             <Route
                                 path="/"
-                                element={<Navigate to="/highlights/contact" />}
+                                element={<Navigate to="/highlights/aboutme" />}
                             />
                             <Route
                                 path="/highlights/:info"
