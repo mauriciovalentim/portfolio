@@ -1,20 +1,30 @@
 import styles from "./InfoNav.module.css";
+import { NavLink, useLocation, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function InfoNav() {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        console.log(pathname.split("/"));
+    }, [pathname]);
     return (
         <div className={styles.choiceContainer}>
-            {/* <a href="" className="link">
+            <NavLink
+                to={`${pathname.split("/")[1]}/aboutme`}
+                className={({ isActive }) =>
+                    isActive ? styles.active : styles.link
+                }
+            >
                 SOBRE MIM
-            </a>
-            <a href="" className="link">
-                EXPERIÊNCIA
-            </a>
-            <a href="" className="link">
-                FORMAÇÃO
-            </a> */}
-            <a href="" className="active">
+            </NavLink>
+            <NavLink
+                to={`${pathname.split("/")[1]}/contact`}
+                className={({ isActive }) =>
+                    isActive ? styles.active : styles.link
+                }
+            >
                 CONTATO
-            </a>
+            </NavLink>
         </div>
     );
 }

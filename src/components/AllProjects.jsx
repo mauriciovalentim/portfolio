@@ -12,8 +12,9 @@ export default function AllProjects({ projects }) {
                 <div key={i} className={styles.project}>
                     <img src={project.img} alt="" />
                     <div className={styles.stackContainer}>
-                        {project.tags.map((tag) => (
+                        {project.tags.map((tag, i) => (
                             <img
+                            key={i}
                                 className={styles.stack}
                                 src={tag.img}
                                 alt={tag.name}
