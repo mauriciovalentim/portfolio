@@ -108,8 +108,8 @@ let projects = [
         ],
         responsiveness: {
             computer: true,
-            tablet: false,
-            mobile: false,
+            tablet: true,
+            mobile: true,
         },
         description: "Listagem de informações e projetos pessoais",
         highlight: true,

@@ -1,15 +1,20 @@
 .choiceContainer {
-    display: flex;
+    /* display: flex;
     width: 70%;
     margin: auto;
     justify-content: center;
     padding: 30px 0px 10px 0px;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    display: grid;
+    gap: 10px;
+    width: 70%;
+    margin: 20px auto;
 }
 
 .link,
 .active {
+    text-align: center;
     user-select: none;
     font-family: "Roboto";
     font-weight: normal;
@@ -38,4 +43,15 @@
 .active:hover {
     cursor: default;
     box-shadow: none;
+}
+
+@media (min-width: 768px) {
+    .choiceContainer {
+        display: flex;
+        width: 70%;
+        margin: 20px auto;
+        justify-content: center;
+        /* padding: 30px 0px 10px 0px; */
+        flex-wrap: wrap;
+    }
 }

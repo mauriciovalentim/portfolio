@@ -1,5 +1,5 @@
 import styles from "./InfoNav.module.css";
-import { NavLink, useLocation} from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function InfoNav() {
     const { pathname } = useLocation();
@@ -13,6 +13,23 @@ export default function InfoNav() {
             >
                 SOBRE MIM
             </NavLink>
+            <NavLink
+                to={`${pathname.split("/")[1]}/school`}
+                className={({ isActive }) =>
+                    isActive ? styles.active : styles.link
+                }
+            >
+                FORMAÇÃO
+            </NavLink>
+            <NavLink
+                to={`${pathname.split("/")[1]}/experience`}
+                className={({ isActive }) =>
+                    isActive ? styles.active : styles.link
+                }
+            >
+                EXPERIÊNCIA
+            </NavLink>
+
             <NavLink
                 to={`${pathname.split("/")[1]}/contact`}
                 className={({ isActive }) =>
