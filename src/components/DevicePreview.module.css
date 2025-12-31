@@ -5,6 +5,7 @@
 
     /* padding: 5%; */
     /* text-align: center; */
+    /* background-color: red; */
 }
 
 .deviceContainer > * {
@@ -15,6 +16,7 @@
     z-index: 1;
     pointer-events: none;
     width: 100%;
+    padding: 0px 30px 0px 0px;
 }
 .tablet {
     z-index: 1;
@@ -22,6 +24,7 @@
     width: 80%;
     display: block;
     margin: auto;
+    transform: translateX(-30px);
 }
 .mobile {
     z-index: 1;
@@ -29,6 +32,7 @@
     /* height: 100%; */
     display: block;
     margin: auto;
+    transform: translateX(-30px);
 }
 .webPageComputer {
     width: 1706px;
@@ -67,9 +71,11 @@
     position: absolute;
     top: 4%;
     left: 50%;
+
     transform-origin: 0 0;
     border-radius: 20px;
     border: none;
+    margin-left: -30px;
 }
 
 .glassTablet {
@@ -89,6 +95,7 @@
         rgba(233, 233, 233, 0.3),
         rgb(233, 233, 233, 0.8)
     );
+    margin-left: -30px;
 }
 
 /* .webPageComputer,
@@ -109,6 +116,7 @@
     transform-origin: 0 0;
     border-radius: 65px;
     border: none;
+    margin-left: -30px;
 }
 
 .glassMobile {
@@ -128,6 +136,7 @@
         rgba(233, 233, 233, 0.1),
         rgb(233, 233, 233, 0.8)
     );
+    margin-left: -30px;
 }
 
 .spinnerContainer {

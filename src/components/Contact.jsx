@@ -76,7 +76,7 @@ export default function Contact() {
     const url = {
         linkedin: "https://www.linkedin.com/in/mauricio-valentim/",
         whatsapp:
-            "https://api.whatsapp.com/send/?phone=5581984268982&text&type=phone_number&app_absent=0",
+            "https://api.whatsapp.com/send/?phone=5581989550179&text&type=phone_number&app_absent=0",
         github: "https://github.com/mauriciovalentim",
     };
     return (

@@ -9,7 +9,7 @@ export default function SocialLinks() {
         github: "https://github.com/mauriciovalentim",
         linkedin: "https://www.linkedin.com/in/mauricio-valentim/",
         whatsapp:
-            "https://api.whatsapp.com/send/?phone=5581984268982&text&type=phone_number&app_absent=0",
+            "https://api.whatsapp.com/send/?phone=5581989550179&text&type=phone_number&app_absent=0",
     };
     return (
         <span className={styles.container}>
@@ -17,10 +17,18 @@ export default function SocialLinks() {
                 <a href={urls.github} target="_blank" rel="noopener noreferrer">
                     <FaGithubSquare className={styles.social} />
                 </a>
-                <a href={urls.linkedin} target="_blank" rel="noopener noreferrer">
+                <a
+                    href={urls.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaLinkedin className={styles.social} />
                 </a>
-                <a href={urls.whatsapp} target="_blank" rel="noopener noreferrer">
+                <a
+                    href={urls.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaWhatsappSquare className={styles.social} />
                 </a>
             </span>

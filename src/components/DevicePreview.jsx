@@ -83,7 +83,7 @@ function DevicePreview({ device, url }) {
 
     const sizeOptions = {
         computer: function () {
-            let screen = deviceContainer.current.offsetWidth / 1706;
+            let screen = deviceContainer.current.offsetWidth / 1806;
             screen *= 0.92;
             setWidth(screen);
             setMobileHeight(deviceContainer.current.offsetHeight);
